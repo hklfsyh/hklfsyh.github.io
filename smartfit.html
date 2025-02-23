@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFit - Project Detail</title>
+  <!-- Google Fonts (Same as the main page) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <!-- CSS specifically for project details -->
+  <link rel="stylesheet" href="project-style.css">
+</head>
+
+<body>
+
+  <!-- Navbar (Same as the main page) -->
+  <header>
+    <div class="navbar">
+      <div class="logo"><a href="index.html">Haikal</a></div>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="certificate.html">Certificates</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Project Description -->
+    <section id="project-description">
+      <h2>SmartFit</h2>
+      <div class="description-content">
+        <p>SmartFit is a <strong>mobile application</strong> that recommends personalized outfit choices based on skin
+          tone, weather, and category.</p>
+        <p><strong>Technologies Used:</strong> Kotlin, Android Studio, Firebase, TensorFlow</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Personalized outfit recommendations</li>
+          <li>Skin tone and seasonal style analysis</li>
+          <li>Firebase database and authentication</li>
+          <li>Machine learning-powered outfit suggestions</li>
+        </ul>
+        <div class="dropdown">
+          <button class="btn-download">View Profile</button>
+          <div class="dropdown-content">
+            <a href="https://github.com/hklfsyh" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/haikalafifsyah/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section id="project-gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <div class="image-card"><img src="/images/smartfit1.webp" alt="SmartFit Screenshot 1"></div>
+        <div class="image-card"><img src="/images/smartfit2.webp" alt="SmartFit Screenshot 2"></div>
+        <div class="image-card"><img src="/images/smartfit3.webp" alt="SmartFit Screenshot 3"></div>
+        <div class="image-card"><img src="/images/smartfit4.webp" alt="SmartFit Screenshot 4"></div>
+        <div class="image-card"><img src="/images/smartfit5.webp" alt="SmartFit Screenshot 5"></div>
+        <div class="image-card"><img src="/images/smartfit7.webp" alt="SmartFit Screenshot 7"></div>
+        <div class="image-card"><img src="/images/smartfit8.webp" alt="SmartFit Screenshot 8"></div>
+        <div class="image-card"><img src="/images/smartfit9.webp" alt="SmartFit Screenshot 9"></div>
+        <div class="image-card"><img src="/images/smartfit10.webp" alt="SmartFit Screenshot 10"></div>
+        <div class="image-card"><img src="/images/smartfit11.webp" alt="SmartFit Screenshot 11"></div>
+        <div class="image-card"><img src="/images/smartfit12.webp" alt="SmartFit Screenshot 12"></div>
+        <div class="image-card"><img src="/images/smartfit13.webp" alt="SmartFit Screenshot 13"></div>
+        <div class="image-card"><img src="/images/smartfit14.webp" alt="SmartFit Screenshot 14"></div>
+        <div class="image-card"><img src="/images/smartfit15.webp" alt="SmartFit Screenshot 15"></div>
+        <div class="image-card"><img src="/images/smartfit16.webp" alt="SmartFit Screenshot 16"></div>
+        <div class="image-card"><img src="/images/smartfit17.webp" alt="SmartFit Screenshot 17"></div>
+        <div class="image-card"><img src="/images/smartfit18.webp" alt="SmartFit Screenshot 18"></div>
+        <div class="image-card"><img src="/images/smartfit19.webp" alt="SmartFit Screenshot 19"></div>
+        <div class="image-card"><img src="/images/smartfit20.webp" alt="SmartFit Screenshot 20"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (Same as the main page) -->
+  <footer>
+    <p class="footer-copy">&copy;2025 Haikal Afifsyah. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal for Image Zoom -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

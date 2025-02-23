@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Haikal</title>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <!-- Tidak menggunakan Font Awesome karena kita pakai gambar langsung untuk keahlian -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Kalfolio</div>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Section Tentang Saya -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                  <!-- Gambar Depan -->
+                  <div class="flip-card-front" id="imgfront">
+                      <img src="/images/Foto Haikal No BG.png" alt="Foto Profil Haikal">
+                  </div>
+                  <!-- Gambar Belakang -->
+                  <div class="flip-card-back">
+                      <img src="/images/fotosaya1.jpg" alt="Foto Kedua Haikal">
+                  </div>
+              </div>
+          </div>
+      </div>      
+        <div class="about-text">
+          <p>Passionate and detail-oriented Informatics Engineering student with a strong curiosity in mobile
+            development, web technologies, and software engineering. Experienced in working on various projects, eager
+            to learn new technologies, and easily adapt to dynamic environments. A proactive team player with
+            problem-solving skills, looking for opportunities in internships or any other roles to contribute and expand
+            expertise.</p>
+          <!-- Tombol Download CV -->
+          <a href="/file/Haikal_Afifsyah_CV_ATS_Black.pdf" download class="btn-download">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Keahlian -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <!-- Card Keahlian HTML5 dengan efek flip -->
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://cdn-icons-png.flaticon.com/512/226/226777.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">JAVA</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">Kotlin</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">Flutter</span>
+              <span class="skill-level">Amateur</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">Html</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">CSS</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1280px-PHP-logo.svg.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">PHP</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="skill-icon"
+                style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png');">
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="skill-name">Python</span>
+              <span class="skill-level">Amateur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Pendidikan -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-container">
+
+        <!-- Politeknik Negeri Jakarta -->
+        <div class="education-item">
+          <div class="education-logo-card">
+            <img src="https://learningcenter.mulaindonesia.com/wp-content/uploads/2024/03/1.png"
+              alt="Politeknik Negeri Jakarta Logo">
+          </div>
+          <div class="education-details">
+            <h3>Politeknik Negeri Jakarta</h3>
+            <p><strong>Degree:</strong> Applied Bachelor's (D4) in Informatics Engineering</p>
+            <p><strong>Duration:</strong> Sep 2022 - Present</p>
+            <p><strong>GPA:</strong> 3.68</p>
+            <p><strong>Description:</strong> Currently pursuing an applied bachelor's degree in <strong>Informatics
+                Engineering</strong>, where I delve into various fields within <strong>computer science and information
+                technology</strong>, including <strong>software development, web and mobile technologies, networking,
+                and even IoT (Internet of Things)</strong>. The program is designed to equip students with a strong
+              technical foundation and hands-on experience to solve real-world IT challenges.</p>
+          </div>
+        </div>
+
+        <!-- Bangkit Academy -->
+        <div class="education-item">
+          <div class="education-logo-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Bangkit-logo.png" alt="Bangkit Academy Logo">
+          </div>
+          <div class="education-details">
+            <h3>Bangkit Academy Batch 2</h3>
+            <p><strong>Specialization:</strong> Mobile Development (Kotlin)</p>
+            <p><strong>Duration:</strong> Sep 2024 - Jan 2025</p>
+            <p><strong>Achievement:</strong> Distinction Graduate (Top 10%)</p>
+            <p><strong>Description:</strong> Bangkit is a <strong>Kampus Merdeka</strong> partner program under the
+              Indonesian Ministry of Education, conducted in collaboration with leading tech companies. As part of the
+              <strong>Mobile Development Learning Path</strong>, I specialized in <strong>Kotlin programming</strong> to
+              develop <strong>scalable and efficient mobile applications</strong>. The program included technical
+              training, soft skills enhancement, and capstone projects. I successfully graduated with
+              <strong>Distinction</strong>, ranking among the <strong>top 10% of all learners</strong> in my learning
+              path.
+            </p>
+          </div>
+        </div>
+
+        <!-- CEP-CCIT FTUI -->
+        <div class="education-item">
+          <div class="education-logo-card">
+            <img src="https://psb.ccit-ftui.com/theme/images/ccit-logo.png" alt="CEP-CCIT FTUI Logo">
+          </div>
+          <div class="education-details">
+            <h3>CEP-CCIT FTUI</h3>
+            <p><strong>Certification:</strong> Professional Certificate in Software Engineering</p>
+            <p><strong>Duration:</strong> Aug 2021 - Nov 2023</p>
+            <p><strong>GPA:</strong> 3.63</p>
+            <p><strong>Certifications:</strong>
+              - Professional in Software Engineering (CEP-CCIT FTUI) <br>
+              - DNIIT Java Technologies Certification (Outstanding) (NIIT)
+            </p>
+            <p><strong>Description:</strong> This was an intensive two-year program focused on
+              software engineering, web development, and mobile application development, primarily
+              using <strong>Java technologies</strong>. I gained expertise in full-stack development, system
+              design, and software architecture. Upon completion, I earned the <strong>Professional in
+                Software Engineering</strong> title from CCIT FTUI and <strong>DNIIT Java Technologies
+                Certification</strong> with the highest distinction level, <strong>Outstanding</strong>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section Proyek -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <!-- Card Proyek 1 -->
+        <!-- Project 1: SakaBook -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/sakabook1.jpg" alt="SakaBook Project">
+          </div>
+          <div class="project-details">
+            <h3>SakaBook</h3>
+            <p><strong>Tech Stack:</strong> Java, SQLite, Android Studio</p>
+            <p><strong>Description:</strong> A simple financial note application that records income and expenses.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Track income & expenses</li>
+              <li>Financial history records</li>
+              <li>SQLite database storage</li>
+              <li>Minimalist UI with Android Studio</li>
+            </ul>
+            </p>
+          </div>
+          <a href="sakabook.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project 2: CookingRecipe -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/cookingrecipe1.jpg" alt="CookingRecipe Project">
+          </div>
+          <div class="project-details">
+            <h3>CookingRecipe</h3>
+            <p><strong>Tech Stack:</strong> Java, Android Studio, HTML, CSS, JavaScript, Firebase</p>
+            <p><strong>Description:</strong> An application designed for viewing recipes created by chefs.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Mobile app for browsing recipes</li>
+              <li>Web-based admin panel for managing data</li>
+              <li>Firebase database for storing recipe data</li>
+              <li>Search functionality and categorized recommendations</li>
+            </ul>
+            </p>
+          </div>
+          <a href="cookingrecipe.html" class="view-more">View More</a>
+        </div>
+
+
+        <!-- Project 3: Asclepius App -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/asclepius1.png" alt="Asclepius App Project">
+          </div>
+          <div class="project-details">
+            <h3>Asclepius App</h3>
+            <p><strong>Tech Stack:</strong> Kotlin, Android Studio, TensorFlow Lite</p>
+            <p><strong>Description:</strong> A mobile application used to detect cancer based on photo input.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Machine learning-based cancer detection</li>
+              <li>Photo analysis with TensorFlow Lite</li>
+              <li>Confidence score output for predictions</li>
+              <li>Simple and intuitive UI for users</li>
+            </ul>
+            </p>
+          </div>
+          <a href="asclepius.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project 4: SmartFit -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/smartfit1.png" alt="SmartFit Project">
+          </div>
+          <div class="project-details">
+            <h3>SmartFit</h3>
+            <p><strong>Tech Stack:</strong> Kotlin, Android Studio, Firebase, TensorFlow</p>
+            <p><strong>Description:</strong> A mobile application that recommends outfits based on skin color and outfit
+              category.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Personalized outfit recommendations</li>
+              <li>Skin tone and seasonal style analysis</li>
+              <li>Firebase database and authentication</li>
+              <li>Machine learning-powered outfit suggestions</li>
+            </ul>
+            </p>
+          </div>
+          <a href="smartfit.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project 5: Movtalog -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/movtalog1.webp" alt="Movtalog Project">
+          </div>
+          <div class="project-details">
+            <h3>Movtalog</h3>
+            <p><strong>Tech Stack:</strong> Flutter, Dart, Visual Studio Code, TMDB API</p>
+            <p><strong>Description:</strong> A multiplatform application that provides up-to-date movie lists with
+              ratings and details.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Real-time movie data from TMDB API</li>
+              <li>Cross-platform support: Android, iOS, Web</li>
+              <li>Detailed movie information: rating, release date, description</li>
+              <li>Favorite movies list feature</li>
+            </ul>
+            </p>
+          </div>
+          <a href="movtalog.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project 6: Vokall -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/vokall1.webp" alt="Vokall Project">
+          </div>
+          <div class="project-details">
+            <h3>Vokall</h3>
+            <p><strong>Tech Stack:</strong> PHP, MySQL, JavaScript, HTML, CSS</p>
+            <p><strong>Description:</strong> A web-based POS (Point of Sale) application for a music-related store,
+              managing products like headphones, TWS, speakers, and more.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Add and delete products</li>
+              <li>Export and import data to/from Excel</li>
+              <li>Transaction and inventory management</li>
+              <li>User authentication and role-based access</li>
+            </ul>
+            </p>
+          </div>
+          <a href="vokall.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project: Festify -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/festify1.webp" alt="Festify Project">
+          </div>
+          <div class="project-details">
+            <h3>Festify</h3>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Description:</strong> A simple and elegant landing page for music events and concerts.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Dynamic event listing</li>
+              <li>Responsive design</li>
+              <li>Navbar with smooth scrolling</li>
+              <li>Concert and event sliders</li>
+            </ul>
+            </p>
+          </div>
+          <a href="festify.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project Card: EDicoding -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/edicoding1.webp" alt="EDicoding Project">
+          </div>
+          <div class="project-details">
+            <h3>EDicoding</h3>
+            <p><strong>Tech Stack:</strong> Kotlin, Android Studio, Retrofit, Room</p>
+            <p><strong>Description:</strong> A mobile app designed to provide easy access to Dicoding events, both
+              online and offline.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>View upcoming and past events</li>
+              <li>Bookmark favorite events</li>
+              <li>Realtime search</li>
+              <li>Dark Mode</li>
+              <li>Daily event reminders</li>
+            </ul>
+            </p>
+          </div>
+          <a href="edicoding.html" class="view-more">View More</a>
+        </div>
+
+        <!-- Project Card: Kopfee Senja -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/images/kopfeesenja1.webp" alt="Kopfee Senja Project">
+          </div>
+          <div class="project-details">
+            <h3>Kopfee Senja</h3>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Description:</strong> A modern coffee shop landing page with online ordering and table
+              reservations.</p>
+            <p><strong>Features:</strong>
+            <ul>
+              <li>Dine-in table reservation</li>
+              <li>Online take-away order system</li>
+              <li>Secure online payment integration</li>
+              <li>Elegant and responsive UI</li>
+            </ul>
+            </p>
+          </div>
+          <a href="kopfeesenja.html" class="view-more">View More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Sertifikat -->
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="certificates-container">
+        <!-- 3 Sertifikat yang Ditampilkan -->
+        <div class="certificate-card">
+          <img src="/images/Sertifikat Professional IT CEP-CCIT FTUI.webp" alt="Certificate 3" onclick="openModal(this.src)">
+          <div class="certificate-info">
+            <h3>CEP CCIT FTUI - Professional Certificate in Information Technology</h3>
+            <p>Issued: Nov 4, 2023</p>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <img src="/images/sertifikatexpectik2024.webp" alt="Certificate 1" onclick="openModal(this.src)">
+          <div class="certificate-info">
+            <h3>EXPECTIK 2024 - Ketua Divisi Kreatif</h3>
+            <p>Issued: Nov 24, 2024</p>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <img src="/images/sertifkatbangkit.webp" alt="Certificate 2" onclick="openModal(this.src)">
+          <div class="certificate-info">
+            <h3>Bangkit Academy 2024 - Mobile Development Path (Disctinction Graduate)</h3>
+            <p>Issued: Jan 10, 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol View More -->
+      <div class="view-more-container">
+        <a href="certificate.html" class="btn-view-more">View More</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-content" id="contact">
+      <p class="contact-label">Kontak Saya</p>
+      <div class="contact-logos">
+        <a href="mailto:haikalafifsyah@gmail.com" target="_blank" class="contact-logo">
+          <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png"
+            alt="Email">
+        </a>
+        <a href="tel:+6285156681946" class="contact-logo">
+          <img
+            src="https://www.freeiconspng.com/thumbs/logo-whatsapp-png/download-and-use-logo-whatsapp-png-clipart-3.png"
+            alt="Telepon">
+        </a>
+        <a href="https://linkedin.com/in/haikalafifsyah" target="_blank" class="contact-logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055"
+            alt="LinkedIn">
+        </a>
+        <a href="https://github.com/hklfsyh" target="_blank" class="contact-logo">
+          <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png" alt="GitHub">
+        </a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy;2025 Haikal Afifsyah. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>

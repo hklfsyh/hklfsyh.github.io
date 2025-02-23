@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movtalog - Project Detail</title>
+    <!-- Google Fonts (Same as the main page) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <!-- CSS specifically for project details -->
+    <link rel="stylesheet" href="project-style.css">
+</head>
+
+<body>
+
+    <!-- Navbar (Same as the main page) -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Haikal</a></div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#education">Education</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="certificate.html">Certificates</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Project Description -->
+        <section id="project-description">
+            <h2>Movtalog</h2>
+            <div class="description-content">
+                <p>Movtalog is a cross-platform movie catalog application that provides up-to-date movie lists with
+                    ratings, descriptions, and details.</p>
+                <p><strong>Technologies Used:</strong> Flutter, Dart, Visual Studio Code, TMDB API</p>
+                <p><strong>Features:</strong></p>
+                <ul>
+                    <li>Real-time movie data fetched from TMDB API</li>
+                    <li>Cross-platform support: Android, iOS, Web</li>
+                    <li>Detailed movie information: rating, release date, and synopsis</li>
+                    <li>Favorites feature to save movies</li>
+                </ul>
+                <div class="dropdown">
+                    <button class="btn-download">View Profile</button>
+                    <div class="dropdown-content">
+                        <a href="https://github.com/hklfsyh" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/haikalafifsyah/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section id="project-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="image-card"><img src="/images/movtalog1.webp" alt="Movtalog Screenshot 1"></div>
+                <div class="image-card"><img src="/images/movtalog2.webp" alt="Movtalog Screenshot 2"></div>
+                <div class="image-card"><img src="/images/movtalog3.webp" alt="Movtalog Screenshot 3"></div>
+                <div class="image-card"><img src="/images/movtalog4.webp" alt="Movtalog Screenshot 4"></div>
+                <div class="image-card"><img src="/images/movtalog5.webp" alt="Movtalog Screenshot 5"></div>
+                <div class="image-card"><img src="/images/movtalog6.webp" alt="Movtalog Screenshot 6"></div>
+                <div class="image-card"><img src="/images/movtalog7.webp" alt="Movtalog Screenshot 7"></div>
+                <div class="image-card"><img src="/images/movtalog8.webp" alt="Movtalog Screenshot 8"></div>
+                <div class="image-card"><img src="/images/movtalog9.webp" alt="Movtalog Screenshot 9"></div>
+                <div class="image-card"><img src="/images/movtalog10.webp" alt="Movtalog Screenshot 10"></div>
+                <div class="image-card"><img src="/images/movtalog11.webp" alt="Movtalog Screenshot 11"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as the main page) -->
+    <footer>
+        <p class="footer-copy">&copy;2025 Haikal Afifsyah. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Image Zoom -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

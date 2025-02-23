@@ -1,0 +1,701 @@
+/* Reset dasar */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #001f3f;
+}
+
+/* Container global untuk memberi ruang di kiri dan kanan */
+.container {
+    width: 75%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* Header dan Navbar */
+header {
+    padding: 1rem 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    padding: 0.5rem 1rem;
+    border: 2px solid #001f3f;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    /* Pastikan background diatur agar tidak transparan */
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #001f3f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #001f3f;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #001f3f;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive untuk tablet dan handphone */
+@media (max-width: 1024px) {
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        /* Dropdown sama lebar dengan navbar */
+        background: #fff;
+        border: 2px solid #001f3f;
+        border-radius: 25px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        margin-top: 5px;
+    }
+
+    nav ul.show {
+        max-height: 500px;
+        /* Cukup besar untuk menampung semua menu */
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+main {
+    margin-top: 80px;
+    /* Sesuaikan dengan tinggi navbar */
+}
+
+/* Section Tentang Saya */
+#about {
+    margin-top: 40px;
+}
+
+#about h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #001f3f;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center; /* Memastikan tetap rata tengah */
+}
+
+.about-image {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+    font-size: 1rem;
+}
+
+.flip-card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img,
+.flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flip-card-front #imgfront {
+    background: #001f3f;
+}
+
+/* Tombol Download CV di section Tentang Saya */
+.btn-download {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #001f3f;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #f39c12;
+}
+
+/* Section Keahlian - Card Style (dengan Flip Card) */
+#skills {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#skills h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #001f3f;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Pusatkan item pada baris baru */
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Card dasar */
+.skill-item.card {
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    /* Memberikan efek 3D */
+}
+
+/* Struktur Flip Card */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.skill-item.card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Sisi Depan Flip Card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid #001f3f;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sisi Depan: Menampilkan ikon keahlian */
+.flip-card-front {
+    background: #fff;
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Sisi Belakang: Menampilkan nama keahlian */
+.flip-card-back {
+    background: #001f3f;
+    color: #fff;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-level {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    opacity: 0.8;
+}
+
+/* Section Pendidikan */
+#education {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#education h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #001f3f;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.education-item {
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    border: 2px solid #001f3f;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: scale(1.02);
+}
+
+/* Membagi ruang education-item menjadi 50% logo dan 50% konten */
+.education-logo-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.education-logo-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.education-details {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
+    padding: 1rem;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-details p {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Section Proyek */
+#projects {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#projects h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #001f3f;
+}
+
+/* Grid agar menampilkan 3 card dalam satu baris (jika layar cukup lebar) */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Card Proyek Vertikal */
+.project-card {
+    width: 100%;
+    max-width: 400px;
+    /* Ditingkatkan agar proporsional dengan gambar lebih besar */
+    border: 2px solid #001f3f;
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+/* Bagian Gambar di Atas */
+.project-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.project-image img {
+    width: 250px;
+    /* Gambar lebih besar */
+    height: 250px;
+    object-fit: contain;
+}
+
+/* Bagian Konten di Bawah */
+.project-details {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.project-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #001f3f;
+}
+
+.project-details p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Tombol "Lihat Lebih Banyak" yang muncul saat hover */
+.view-more {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #001f3f;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.view-more:hover {
+    background: #f39c12;
+}
+
+.project-card:hover .view-more {
+    bottom: 10px;
+    opacity: 1;
+}
+
+/* Memastikan bullet list tetap dalam card */
+.project-details ul {
+    padding-left: 20px; /* Tambahkan padding kiri agar bullet tidak keluar */
+    margin-top: 0.5rem;
+    list-style-type: disc; /* Pastikan menggunakan bullet list */
+}
+
+.project-details ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Section Kontak */
+#contact {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #001f3f;
+}
+
+/* Container untuk Kontak: bisa disusun vertikal */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Informasi Kontak */
+.contact-info {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border: 2px solid #001f3f;
+    border-radius: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: #001f3f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #f39c12;
+}
+
+/* Form Kontak */
+.contact-form {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border: 2px solid #001f3f;
+    border-radius: 15px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #001f3f;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    background: #001f3f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #f39c12;
+}
+
+/* Footer */
+footer {
+    background: #001f3f;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-label {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.contact-logos {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-logo img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.contact-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+}
+
+/* Section Sertifikat */
+#certificates {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#certificates h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #001f3f;
+}
+
+/* Grid Sertifikat */
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Card Sertifikat */
+.certificate-card {
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    border: 2px solid #001f3f;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.certificate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar Sertifikat */
+.certificate-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #001f3f;
+}
+
+/* Informasi Sertifikat */
+.certificate-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.certificate-info h3 {
+    font-size: 1.2rem;
+    color: #001f3f;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Tombol View More */
+.view-more-container {
+    margin-top: 1.5rem;
+}
+
+.btn-view-more {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #001f3f;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-view-more:hover {
+    background: #f39c12;
+}
+
