@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/*
+  PERBAIKAN FINAL:
+  Menggunakan pseudo-element untuk animasi gradien agar tidak
+  mempengaruhi tinggi halaman dan menyebabkan ruang kosong.
+*/
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  /* Ditempatkan di lapisan paling belakang */
+
+  background: linear-gradient(135deg,
+      #111827,
+      #3b0764,
+      #4c1d95,
+      #3b0764,
+      #111827);
+  background-size: 100% 300%;
+  animation: animatedGradient 10s ease-in-out infinite;
+}
+
+@keyframes animatedGradient {
+  0% {
+    background-position: 0 0%;
+  }
+
+  50% {
+    background-position: 0 100%;
+  }
+
+  100% {
+    background-position: 0 0%;
+  }
+}
+
+/*
+  PERBAIKAN:
+  Styling untuk scrollbar kustom sekarang berlaku secara GLOBAL.
+  Selector '.custom-scrollbar' telah dihapus.
+*/
+
+/* Mengatur lebar scrollbar secara keseluruhan */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Mengatur bagian "rel" atau "track" tempat scrollbar bergerak */
+::-webkit-scrollbar-track {
+  background: #111827; /* Warna track disamakan dengan background utama */
+}
+
+/* Mengatur bagian "pegangan" atau "thumb" yang bisa digerakkan */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 92, 246, 0.4); /* Warna ungu transparan */
+  border-radius: 10px;
+  border: 3px solid #111827; /* Memberi efek padding dengan warna track */
+}
+
+/* Mengubah warna pegangan saat di-hover agar lebih interaktif */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(139, 92, 246, 0.6);
+}
